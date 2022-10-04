@@ -2,10 +2,16 @@
 	<body>
 		<h1>Jubilación</h1>
 		<?php
-		if (edad_en_5_años(61) > 65) {
-			echo "En 10 años tendrás edad de jubilación";
-		} else {
-			echo "¡Disfruta de tu tiempo!";
+			$edad = 61;
+		function edad_en_5_años($edad){
+		return $edad + 5;
+		}
+		function mensaje($edad){
+		if (edad_en_5_años($edad) >65){
+			return "En 5 años tendrás edad de jubilación.";
+		}else{
+			return "¡Disfruta de tu tiempo!";
+			}
 		}
 		?>
 		<table>
